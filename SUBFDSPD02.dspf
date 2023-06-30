@@ -1,0 +1,54 @@
+     A*%%TS  SD  20230630  015839  GANESHH     REL-V7R3M0  5770-WDS
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A          R SFL                       SFL
+     A*%%TS  SD  20230630  001055  GANESHH     REL-V7R3M0  5770-WDS
+     A            NAME          55A  B  6  2DSPATR(PR)
+     A*           PHONE         10A  B 10 39DSPATR(PR)
+     A          R SFLCTL                    SFLCTL(SFL)
+     A*%%TS  SD  20230630  015839  GANESHH     REL-V7R3M0  5770-WDS
+     A                                      OVERLAY
+     A                                      SFLDSP
+     A                                      SFLDSPCTL
+     A  55                                  SFLCLR
+     A                                      SFLSIZ(9999)
+     A                                      SFLPAG(0018)
+     A                                  1 31'Files Display'
+     A                                      COLOR(WHT)
+     A*           SERCHFOR      15A  I  2 11DSPATR(PR)
+     A*                                     DSPATR(ND)
+     A                                  1  2USER
+     A                                      COLOR(BLU)
+     A                                  1 72DATE
+     A                                      EDTCDE(Y)
+     A                                      COLOR(BLU)
+     A                                  2 72TIME
+     A                                      COLOR(BLU)
+     A                                  4  2'File List'
+     A                                      COLOR(YLW)
+     A                                  5  2'-----------------------------------
+     A                                      ------------------------------------
+     A                                      ---------'
+     A                                      COLOR(YLW)
+     A                                  3  2'<Scroll Up> <Scroll Down>'
+     A                                      COLOR(BLU)
+     A          R FIRST
+     A*%%TS  SD  20230630  012730  GANESHH     REL-V7R3M0  5770-WDS
+     A                                  1  3' '
+     A                                 23  2'F3=Exit'
+     A                                      COLOR(BLU)
+     A            SERCHFOR      15A  B  9 25CHECK(LC)
+     A            PATTERN        6A  B  8 25CHECK(LC)
+     A                                  2 72DATE
+     A                                      EDTCDE(Y)
+     A                                      COLOR(BLU)
+     A                                  3 72TIME
+     A                                      COLOR(BLU)
+     A                                  2  1USER
+     A                                      COLOR(BLU)
+     A                                  2 27'Files selection and display'
+     A                                      COLOR(WHT)
+     A                                  8 16'Pattern:'
+     A                                  9 16'Search:'
+     A                                 20 15'Press Enter for the file listing'
+     A                                      COLOR(RED)
