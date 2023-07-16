@@ -17,6 +17,7 @@
 #define LEN 55
 #define NUM_RECS 100
 #define SUBFILENAME "*LIBL/SUBFDSPD02"
+#define ARR_LIMIT 1000
 
 typedef struct{
    char name[LEN];
@@ -32,7 +33,7 @@ typedef union
 }formats;
 
 #define RECLEN sizeof(pf_t)
-char file_list[55][1000];
+char file_list[55][ARR_LIMIT];
 int index = 0;
 
 void substring(char [], char[], int, int);
@@ -165,6 +166,10 @@ int listFiles(char *file_path)
              file_name = en->d_name;
              //strcpy(file_list[index++], file_name);
              index += 1;
+             if (index > ARR_LIMIT)
+             {
+                break;
+             }
              strcpy(file_list[index], en->d_name);
 
              //create a subfolder path
